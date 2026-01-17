@@ -1,15 +1,16 @@
 public class Test {
-
     public static void main(String[] args) {
-        if (runTest()) {
-            System.out.println("pass");
-        } else {
-            System.out.println("fail");
-        }
+        System.out.println(new Test().runTestStatus());
     }
 
-    public static boolean runTest() {
+    public String runTestStatus() {
+        if (runTest()) {
+            return "pass";
+        }
+        return "fail";
+    }
+
+    public boolean runTest() {
         return true;
     }
-
 }
