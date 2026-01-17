@@ -12,6 +12,10 @@ public class Test {
 
     public boolean runTest() {
         Code code = new Code();
-        return code.celsiusToFahrenheit(30) == 86;
+
+        boolean test1 = code.celsiusToFahrenheit(30) == 86;
+        boolean test2 = code.celsiusToFahrenheit(20) == 68;
+
+        return test1 && test2;
     }
 }
