@@ -15,7 +15,8 @@ public class Test {
 
         boolean test1 = code.celsiusToFahrenheit(30) == 86;
         boolean test2 = code.celsiusToFahrenheit(20) == 68;
+        boolean test3 = code.celsiusToFahrenheit(10) == 50;
 
-        return test1 && test2;
+        return test1 && test2 && test3;
     }
 }
