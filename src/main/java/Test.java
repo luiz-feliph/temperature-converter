@@ -13,10 +13,22 @@ public class Test {
     public boolean runTest() {
         Code code = new Code();
 
-        boolean test1 = code.celsiusToFahrenheit(30) == 86;
-        boolean test2 = code.celsiusToFahrenheit(20) == 68;
-        boolean test3 = code.celsiusToFahrenheit(10) == 50;
+        boolean test1 = expectEqual(30, 86);
+        boolean test2 = expectEqual(20, 68);
+        boolean test3 = expectEqual(10, 50);
 
         return test1 && test2 && test3;
+    }
+
+    private boolean expectEqual(int input, int expected) {
+        Code code = new Code();
+
+        int actual = code.celsiusToFahrenheit(input);
+        if (actual == expected) {
+            System.out.println("Test passes, " + input + " is " + expected);
+            return true;
+        }
+        System.out.println("Test failed, expected " + input + " to be " + expected + ", but was " + actual);
+        return false;
     }
 }
