@@ -11,6 +11,7 @@ public class Test {
     }
 
     public boolean runTest() {
-        return false;
+        Code code = new Code();
+        return code.celsiusToFahrenheit(30) == 86;
     }
 }
