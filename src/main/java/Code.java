@@ -2,6 +2,7 @@ public class Code {
 
 
     public int celsiusToFahrenheit(int temperature) {
-        return (temperature == 20? 68 : 86);
+        int x = (int) (temperature * 0.8);
+        return temperature + 32 + x;
     }
 }
