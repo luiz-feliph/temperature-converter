@@ -1,7 +1,7 @@
 import entities.Celsius;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CelsiusTestJUnit {
 
@@ -9,6 +9,15 @@ public class CelsiusTestJUnit {
 
     @Test
     void toFahrenheit() {
-        assertEquals(85, celsius.toFahrenheit(30));
+        assertAll("convert to fahrenheit",
+                () -> assertEquals(86, celsius.toFahrenheit(30)),
+                () -> assertEquals(68, celsius.toFahrenheit(20)),
+                () -> assertEquals(50, celsius.toFahrenheit(10))
+        );
+    }
+
+    @Test
+    void impossibleTemperature() {
+        assertThrows(RuntimeException.class, () -> celsius.toFahrenheit(-274));
     }
 }
