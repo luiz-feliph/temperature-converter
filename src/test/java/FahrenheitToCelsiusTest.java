@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class FahrenheitTestJUnit {
+public class FahrenheitToCelsiusTest {
 
     private final Fahrenheit fahrenheit = new Fahrenheit();
 
