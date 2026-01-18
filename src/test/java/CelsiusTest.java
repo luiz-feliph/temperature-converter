@@ -1,3 +1,5 @@
+import entities.Celsius;
+
 public class CelsiusTest {
     public static void main(String[] args) {
         System.out.println(new CelsiusTest().runTestStatus());

@@ -32,7 +32,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Celsius ###
+### VS entities.Celsius ###
 .vscode/
 
 ### Mac OS ###
